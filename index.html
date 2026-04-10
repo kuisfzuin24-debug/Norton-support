@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Support</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{background:#fff;color:#111;}
+
+/* HEADER */
+.header{
+  position:sticky;top:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 40px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:1000;
+}
+
+.logo img{width:90px;}
+
+.nav a{
+  margin-left:20px;text-decoration:none;color:#333;font-weight:500;
+}
+
+.nav a:hover{color:#ffcc00;}
+
+/* HERO */
+.hero{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  padding:120px 20px;
+  background:url('hero.avif') center/cover no-repeat;
+}
+
+
+
+.hero-text{
+  position:relative;
+  max-width:700px;
+  text-align:center;
+  padding:0 15px;
+}
+
+.hero-text h1{
+  font-size:42px;
+  color:#fff;
+}
+
+.hero-text p{
+  color:#ffffff;
+  margin:20px 0;
+}
+
+.btn{
+  background:#ffcc00;
+  color:#000;
+  padding:12px 24px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+}
+
+/* TRUST */
+.trust{
+  display:flex;justify-content:center;gap:40px;
+  padding:30px 20px;
+  background:#fafafa;
+  flex-wrap:wrap;
+}
+
+.trust div{text-align:center;}
+
+/* FEATURES */
+.features{
+  padding:60px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.feature{
+  padding:25px;
+  border:1px solid #eee;
+  border-radius:10px;
+}
+
+/* SPLIT */
+.split{
+  display:flex;align-items:center;gap:40px;
+  padding:60px 20px;
+}
+
+.split img{
+  width:100%;
+  max-width:400px;
+  border-radius:10px;
+}
+
+.split:nth-child(even){background:#fff9e6;}
+
+.split-text{max-width:500px;}
+
+/* CTA */
+.cta{
+  margin:40px 20px;
+  padding:40px 20px;
+  border-radius:10px;
+  background:#ffcc00;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.cta button{
+  padding:12px 25px;
+  border:none;
+  background:#000;
+  color:#ffcc00;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer{
+  background:#111;color:#aaa;
+  padding:30px 20px;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.header{
+  flex-direction:column;
+  gap:10px;
+  padding:15px;
+}
+
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.nav a{margin:10px;}
+
+.hero-text h1{font-size:30px;}
+
+.split{
+  flex-direction:column;
+  text-align:center;
+}
+
+.cta{
+  flex-direction:column;
+  text-align:center;
+}
+
+}
+
+
+/* MOBILE MENU */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{display:block;}
+
+.nav{
+  position:absolute;
+  top:70px;
+  left:0;
+  width:100%;
+  background:#fff;
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.nav.active{display:flex;}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">
+    <img src="logo.png">
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav" id="navMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Protection & Support You Can Trust</h1>
+    <p>Fast, reliable, and secure technical support designed to keep your digital life running smoothly.</p>
+    <a href="tel:+1-877-513-6165" class="btn">+1(877)513-6165</a>
+  </div>
+</div>
+
+<div class="trust" id="about">
+  <div><h3>📞 +1(877)513-6165</h3><p>Call Anytime</p></div>
+  <div><h3>10K+</h3><p>Users Protected</p></div>
+  <div><h3>24/7</h3><p>Support Available</p></div>
+  <div><h3>99%</h3><p>Customer Satisfaction</p></div>
+</div>
+
+<div class="features" id="Services">
+  <div class="feature"><h3>📞 Call Us</h3><p>Reach us anytime at +1(877)513-6165 for instant help.</p></div>
+  <div class="feature"><h3>Real-Time Support</h3><p>Instant help when you need it most.</p></div>
+  <div class="feature"><h3>Secure Assistance</h3><p>We prioritize your safety and privacy.</p></div>
+  <div class="feature"><h3>Expert Guidance</h3><p>Clear and simple solutions.</p></div>
+</div>
+
+<div class="split">
+  <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+  <div class="split-text">
+    <h2>All-in-One Support Platform</h2>
+    <p>Manage and resolve issues quickly with a modern, structured support system.</p>
+  </div>
+</div>
+
+<div class="split">
+  <div class="split-text">
+    <h2>Simple. Fast. Reliable</h2>
+    <p>We eliminate confusion and help you fix problems with confidence.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+</div>
+
+<div class="cta" id="contact">
+  <h2>Need Immediate Help? Call +1(877)513-6165</h2>
+  <h2>Need Immediate Help?</h2>
+  <button onclick="callNow()">Call Now</button>
+</div>
+
+<footer>
+  <p>© 2026 Smart Support</p>
+</footer>
+
+<script>
+function callNow(){window.location.href='tel:+18775136165';}
+
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
